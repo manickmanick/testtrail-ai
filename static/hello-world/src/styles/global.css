@@ -1,0 +1,296 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f7f8fa;
+  color: #172b4d;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.app-container {
+  width: 100%;
+  padding: 24px;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.app-brand {
+  color: #6554c0;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.app-header h1 {
+  margin: 8px 0;
+  font-size: 24px;
+}
+
+.app-header p,
+.section-heading p {
+  color: #6b778c;
+  font-size: 13px;
+  margin: 5px 0;
+}
+
+.refresh-button,
+.retry-button {
+  border: 1px solid #dfe1e6;
+  background: white;
+  color: #344563;
+  border-radius: 7px;
+  padding: 9px 14px;
+}
+
+.refresh-button:hover,
+.retry-button:hover {
+  background: #f0f1f5;
+}
+
+.section {
+  margin-bottom: 26px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.section-eyebrow {
+  color: #6554c0;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.section-heading h2 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.issue-summary,
+.bug-card {
+  background: white;
+  border: 1px solid #e6e8ed;
+  border-radius: 10px;
+  padding: 18px;
+}
+
+.issue-header,
+.bug-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.issue-key,
+.bug-key {
+  color: #42526e;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.issue-status,
+.bug-status {
+  background: #e3fcef;
+  color: #216e4e;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.issue-summary h2 {
+  font-size: 19px;
+  margin: 15px 0;
+}
+
+.issue-metadata,
+.bug-details,
+.issue-labels,
+.bug-labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.issue-metadata span,
+.bug-details span {
+  background: #f1f2f4;
+  color: #44546f;
+  border-radius: 5px;
+  padding: 5px 9px;
+  font-size: 11px;
+}
+
+.issue-description {
+  margin-top: 18px;
+  border-top: 1px solid #ebecf0;
+  padding-top: 12px;
+}
+
+.issue-description h4 {
+  font-size: 13px;
+  margin: 0 0 8px;
+}
+
+.issue-description p {
+  color: #505f79;
+  font-size: 13px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.issue-labels,
+.bug-labels {
+  margin-top: 12px;
+}
+
+.label-chip {
+  background: #f0edff;
+  color: #6554c0;
+  border-radius: 5px;
+  padding: 5px 8px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.result-count {
+  background: #eae6ff;
+  color: #5243aa;
+  border-radius: 20px;
+  padding: 6px 10px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.bug-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bug-card {
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.bug-card:hover {
+  border-color: #b8adf2;
+  box-shadow: 0 3px 12px rgba(9, 30, 66, 0.07);
+}
+
+.bug-card h3 {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 13px 0;
+}
+
+.bug-details {
+  color: #6b778c;
+}
+
+.loading-state,
+.empty-state,
+.error-state {
+  background: white;
+  border: 1px solid #e6e8ed;
+  border-radius: 10px;
+  padding: 28px 16px;
+  text-align: center;
+}
+
+.loading-state p,
+.empty-state p,
+.error-state p {
+  color: #6b778c;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.loading-spinner {
+  width: 25px;
+  height: 25px;
+  margin: 0 auto 12px;
+  border: 3px solid #e5e2f5;
+  border-top-color: #6554c0;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.empty-icon,
+.error-icon {
+  width: 35px;
+  height: 35px;
+  margin: auto;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #e3fcef;
+  color: #216e4e;
+  font-weight: bold;
+}
+
+.error-icon {
+  background: #ffebe6;
+  color: #bf2600;
+}
+
+.empty-state h3,
+.error-state h3 {
+  font-size: 14px;
+  margin: 12px 0 5px;
+}
+
+.retry-button {
+  margin-top: 10px;
+}
+
+.app-footer {
+  border-top: 1px solid #e6e8ed;
+  padding-top: 15px;
+  color: #8993a4;
+  font-size: 10px;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    padding: 15px;
+  }
+
+  .app-header h1 {
+    font-size: 20px;
+  }
+
+  .app-header {
+    flex-direction: column;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+  }
+}
